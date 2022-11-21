@@ -5,7 +5,7 @@ const StudentCard = ({student}) => {
     <div className="student-card-containter">
         <ul>
             <li>
-        <span className='name'>{student.userName}</span>
+        <span className='name'>{student.name}</span>
         <span className='grade'>{student.averageGrade}</span>
         </li>
         </ul>
