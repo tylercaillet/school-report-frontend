@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { updateAllCoursesList } from "../actions";
 import { GetCourseList } from "../services/CourseServices";
 import CourseCard from "../components/CourseCard";
 
 const Courses = () => {
-  const [courseList, setCourseList] = useState([]);
   const [needRefresh, setNeedRefresh] = useState([true]);
+  const dispatch = useDispatch();
+  const allCoursesList = useSelector((state) => state.allCourseList);
 
   useEffect(() => {
     let getCoursesList = async () => {
       let data = await GetCourseList();
-      console.log(data);
-      setCourseList(data);
+      dispatch(updateAllCoursesList(data));
       setNeedRefresh(false);
     };
 
@@ -19,17 +21,13 @@ const Courses = () => {
     }
   }, [needRefresh]);
 
-  let courseListRender = <div></div>;
-  if (courseList) {
-    console.log("CourseList", courseList);
-    courseListRender = (
-      <div>
-        {courseList.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
-      </div>
-    );
-  }
+  let courseListRender = (
+    <div>
+      {allCoursesList.map((course) => (
+        <CourseCard key={course.id} course={course} />
+      ))}
+    </div>
+  );
 
   let toRender = (
     <div>
