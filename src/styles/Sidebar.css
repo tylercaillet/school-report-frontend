@@ -1,0 +1,41 @@
+.main-box {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .main-box .side-search{
+    position: fixed;
+    height: 100vh;
+    width: 240px;
+    background: rgba(255, 255, 255, 0.234);
+    box-shadow: 0 0 6px rgb(148, 0, 148);
+    padding-left: 2px;
+  }
+
+  .side-search .content-sidebar {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+  }
+  .content-sidebar {
+    margin-left: 20px;
+    color: rgba(208, 43, 6, 0.994);
+    margin-bottom: 45px;
+  }
+
+  .side-search .content-sidebar a {
+    padding: 10px 12px;
+    transition: all 0.3s linear;
+    color: black;
+    padding-bottom: 28px;
+  }
+
+  .side-search .content-sidebar a:hover{
+    border: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.576);
+    cursor: pointer;
+    scale: 0.98;
+    transition: 0.2s;
+    color: rgb(177, 67, 3);
+  }
