@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import "../styles/Sidebar.css"
 
 
 const Sidebar = () => {
@@ -7,8 +8,11 @@ const Sidebar = () => {
         <div className='side-search'>
             <div className='content-sidebar'>
             <div className="links">
-            <Link to="/students">Students</Link>
-            <Link to="/courses">courses</Link>
+                <ul>
+                <li><Link to="/students">Students</Link></li>
+                <li><Link to="/courses">courses</Link></li>
+                </ul>
+           
         </div>
         </div>
         </div>
