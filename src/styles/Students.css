@@ -1,0 +1,91 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .student-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.student-card-containter{
+    /* transform: translateY(50px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(85, 10, 10);; */
+
+}
+
+.student-card-containter ul{
+    position: relative;
+    width: 450px;
+    /* margin: 10px auto 0; */
+    box-sizing: border-box;
+    /* padding: 10px; */
+}
+
+.student-card-containter ul li {
+    display: flex;
+    /* background-color: rgba(255, 255, 255, .1); */
+    background-image: linear-gradient(to right, rgba(85, 10, 10, 0.801) , rgba(255, 255, 255, .1));
+padding: 10px;
+color: rgb(248, 240, 230);
+justify-content: space-between;
+transition: .5s;
+}
+
+.student-card-containter ul li:nth-child(1){
+    background-color: rgba(85, 10, 10, 0.801);
+}
+
+.student-card-containter ul li span:nth-child(1){
+    width: 30px;
+    margin-left: 30px;
+   
+}
+.student-card-containter ul li span:nth-child(2){
+    width: 30px;
+    margin-right: 30px;
+   
+}
+
+.search-container-box{
+    height: 55px;
+    background: rgb(18, 8, 8);
+    display: flex;
+    width: 600px;
+}
+
+.search-container-box input{
+    flex: 1;
+    border: 1px solid rgba(26, 26, 25, 0.184);
+    outline: none;
+
+    color: black;
+}
+
+.search-container-box button{
+    background-color: rgb(16, 1, 1);
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    color: #d4a373;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.search-container-box button:hover{
+    color: white;
+  
+}
+
+.search-container-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
