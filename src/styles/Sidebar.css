@@ -17,7 +17,7 @@
     position: fixed;
     height: 100vh;
     width: 190px;
-    background: rgba(85, 10, 10, 0.786);
+    background: rgb(85, 10, 10);
     box-shadow: 0 0 6px rgb(148, 59, 0);
     padding-left: 2px;
   }
@@ -45,7 +45,9 @@
     color: rgb(228, 135, 21)
   }
 
-
+a:hover{
+  color: white;
+}
 
 
 
@@ -54,7 +56,9 @@
     border-radius: 25px;
     box-shadow: 0 0 4px rgba(255, 115, 7, 0.576);
     cursor: pointer;
-    scale: 0.88;
+    scale: 0.96;
     transition: 0.4s;
     color: rgb(177, 67, 3);
+    
+
   }
