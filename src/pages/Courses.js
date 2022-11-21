@@ -7,7 +7,7 @@ import CourseCard from "../components/CourseCard";
 const Courses = () => {
   const [needRefresh, setNeedRefresh] = useState([true]);
   const dispatch = useDispatch();
-  const allCoursesList = useSelector((state) => state.allCourseList);
+  const allCoursesList = useSelector((state) => state.allCoursesList);
 
   useEffect(() => {
     let getCoursesList = async () => {

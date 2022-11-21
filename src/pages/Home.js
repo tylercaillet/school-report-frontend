@@ -1,9 +1,9 @@
 const Home = () => {
-  let studentListRender = <div>my student lists</div>;
+  let someStatisticRender = <div>Some useful info to show</div>;
   let toRender = (
     <div>
       <div>Hello this is home page</div>
-      {studentListRender}
+      {someStatisticRender}
     </div>
   );
   return toRender;

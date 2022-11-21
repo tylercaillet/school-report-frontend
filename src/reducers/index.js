@@ -1,8 +1,10 @@
-import courseListReducer from "./courseListReducer";
+import allCoursesListReducer from "./allCoursesListReducer";
+import allStudentsListReducer from "./allStudentsListReducer";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-  allCourseList: courseListReducer
+  allCoursesList: allCoursesListReducer,
+  allStudentsList: allStudentsListReducer
 });
 
 export default allReducers;
