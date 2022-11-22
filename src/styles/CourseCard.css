@@ -19,7 +19,6 @@ h1{
 .course-card-main{
     display: flex;
     justify-content: center;
-
     align-items: center
     ;
 }
