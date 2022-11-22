@@ -93,7 +93,7 @@ cursor: pointer;
     background-color: rgba(209, 209, 209, 0);
     outline: none;
 padding-left: 9px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .search-container-box button{
