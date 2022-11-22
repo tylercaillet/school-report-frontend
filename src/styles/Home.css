@@ -1,0 +1,26 @@
+.home-container{
+    display: flex;
+    background: rgb(107, 14, 14);
+    color: white;
+    margin-top: 50px;
+  
+    align-items: center;
+    justify-content: center;
+  height: 45vh
+}
+
+.col-1{
+    width: 50%;
+    transform: translateX(100px);
+}
+
+.col-2{
+    width: 50%;
+
+}
+
+.col-2 img{
+    width: 105%;
+  scale: 0.55;
+    /* padding: 20px 0; */
+}
