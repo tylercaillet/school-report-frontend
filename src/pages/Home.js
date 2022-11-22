@@ -14,6 +14,7 @@ import { GetCourseList } from "../services/CourseServices";
 import { GetStudentList } from "../services/StudentServices";
 import { GetGrades } from "../services/GradeServices";
 import { GetStudentCourseRelation } from "../services/RelationServices";
+import RelationCard from "../components/RelationCard";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const Home = () => {
     studentId: "",
     courseId: ""
   });
-  const [currentUserRelation, setCurrentUserRelation] = useState({});
+  const [currentUserRelation, setCurrentUserRelation] = useState(null);
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.id]: e.target.value });
@@ -85,8 +86,17 @@ const Home = () => {
   );
 
   let searchResultRender = <div></div>;
+  console.log(currentUserRelation);
   if (currentUserRelation) {
     searchResultRender = <div>Result found</div>;
+    // searchResultRender = (
+    //   <div>
+    //     <RelationCard
+    //       key={currentUserRelation.id}
+    //       relation={currentUserRelation}
+    //     />
+    //   </div>
+    // );
   }
 
   let toRender = (
