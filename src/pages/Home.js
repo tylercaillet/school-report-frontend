@@ -2,7 +2,11 @@ import "../styles/Home.css";
 import schoolimg from "../assets/schoolimg.jpg";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { updateAllCoursesList, updateAllStudentsList } from "../actions";
+import {
+  updateAllCoursesList,
+  updateAllStudentsList,
+  updateAllGradesList
+} from "../actions";
 import { GetCourseList } from "../services/CourseServices";
 import { GetStudentList } from "../services/StudentServices";
 import { GetGrades } from "../services/GradeServices";
@@ -21,7 +25,9 @@ const Home = () => {
     };
     const getGradesList = async () => {
       let data = await GetGrades();
+      dispatch(updateAllGradesList(data));
     };
+    getGradesList();
     getAllStudentsList();
     getCoursesList();
   }, []);

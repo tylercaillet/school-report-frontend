@@ -11,3 +11,10 @@ export const updateAllStudentsList = (allStudents) => {
     payload: allStudents
   };
 };
+
+export const updateAllGradesList = (allGrades) => {
+  return {
+    type: "UPDATE_ALL_GRADES_LIST",
+    payload: allGrades
+  };
+};
