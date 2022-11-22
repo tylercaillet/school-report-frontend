@@ -1,0 +1,26 @@
+.course-form select {
+ border: none;
+ background-color: rgba(142, 142, 142, 0.122);
+ outline: none;
+ padding: 10px 30px;
+ color: black;
+ margin-left: 5px;
+ margin-top: 20px;
+}
+
+.course-form button {
+    background-color: rgb(85, 10, 10);
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    color: #d4a373;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.course-form button:hover{
+    color: white;
+
+    background-color: black;
+}
+

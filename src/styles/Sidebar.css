@@ -11,7 +11,8 @@
 
   ul li {
     list-style-type: none;
-    margin: 2px;
+    margin: 20px;
+    font-size: 20px;
   }
   .main-box .side-search{
     position: fixed;
