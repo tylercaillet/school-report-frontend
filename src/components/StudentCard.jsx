@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const StudentCard = ({student}) => {
     let navigate = useNavigate();
     const toDetail = () => {
-        navigate(`/students/${student.id}`)
+        navigate(`/students/${student.id}/${student.name}`)
     }
     return (
     <div className="student-card-containter">

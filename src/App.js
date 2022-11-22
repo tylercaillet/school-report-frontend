@@ -18,7 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/students" element={<Students />} />
-          <Route path="/students/:studentId" element={<StudentDetails />} />
+          <Route
+            path="/students/:studentId/:studentName"
+            element={<StudentDetails />}
+          />
           <Route path="/courses" element={<Courses />} />
         </Routes>
       </main>

@@ -13,12 +13,12 @@ export const AddRelation = async (data) => {
   }
 };
 
-export const GetStudentRelation = async (data) => {
+export const GetStudentRelation = async (studentId) => {
   try {
     let response = await axios.get(
-      "http://localhost:3001/api/relations/",
-      data
+      `http://localhost:3001/api/relations/${studentId}`
     );
+    console.log("response data", response.data);
     return response.data;
   } catch (error) {
     throw error;
