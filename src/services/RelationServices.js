@@ -24,3 +24,15 @@ export const GetStudentRelation = async (studentId) => {
     throw error;
   }
 };
+
+export const GetStudentCourseRelation = async (studentId, courseId) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:3001/api/relations/${studentId}/${courseId}`
+    );
+    console.log("response data", response.data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
