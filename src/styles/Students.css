@@ -9,6 +9,28 @@
     align-items: center;
 } */
 
+.add-student-form {
+    margin-bottom: 20px;
+}
+.add-student-form input{
+    
+    border: none;
+    background-color: rgba(142, 142, 142, 0.122);
+    outline: none;
+    padding: 10px 30px;
+    color: black;
+    margin-left: 5px;
+}
+.add-student-form button{
+    
+    background-color: rgb(85, 10, 10);
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    color: #d4a373;
+    cursor: pointer;
+    transition: 0.8s;
+}
 .student-card-containter{
     /* transform: translateY(50px); */
     display: flex;
@@ -34,6 +56,13 @@ padding: 10px;
 color: rgb(248, 240, 230);
 justify-content: space-between;
 transition: .5s;
+cursor: pointer;
+}
+
+.student-card-containter ul li:hover{
+    scale: 1.04;
+  color: #d4a373;
+ 
 }
 
 .student-card-containter ul li:nth-child(1){
@@ -53,21 +82,22 @@ transition: .5s;
 
 .search-container-box{
     height: 55px;
-    background: rgb(18, 8, 8);
+    background: rgba(137, 137, 137, 0.265);
     display: flex;
     width: 600px;
 }
 
 .search-container-box input{
     flex: 1;
-    border: 1px solid rgba(26, 26, 25, 0.184);
+    border: none;
+    background-color: rgba(209, 209, 209, 0);
     outline: none;
-
-    color: black;
+padding-left: 9px;
+    color: white;
 }
 
 .search-container-box button{
-    background-color: rgb(16, 1, 1);
+    background-color: rgb(85, 10, 10);
     border: none;
     outline: none;
     padding: 10px 30px;
@@ -76,8 +106,10 @@ transition: .5s;
     transition: 0.8s;
 }
 
-.search-container-box button:hover{
+.search-container-box button:hover, .add-student-form button:hover{
     color: white;
+
+    background-color: black;
   
 }
 

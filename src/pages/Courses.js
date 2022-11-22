@@ -1,66 +1,77 @@
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { updateAllCoursesList } from "../actions";
-import { AddCourse, GetCourseList } from "../services/CourseServices";
-import CourseCard from "../components/CourseCard";
+import { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateAllCoursesList } from '../actions'
+import { AddCourse, GetCourseList } from '../services/CourseServices'
+import CourseCard from '../components/CourseCard'
+import '../styles/CourseCard.css'
 
 const Courses = () => {
-  const [needRefresh, setNeedRefresh] = useState([true]);
-  const [courseAddMode, setCourseAddMode] = useState(false);
-  const dispatch = useDispatch();
-  const allCoursesList = useSelector((state) => state.allCoursesList);
+  const [needRefresh, setNeedRefresh] = useState([true])
+  const [courseAddMode, setCourseAddMode] = useState(false)
+  const dispatch = useDispatch()
+  const allCoursesList = useSelector((state) => state.allCoursesList)
   const [formValues, setFormValues] = useState({
-    name: "",
-    description: ""
-  });
+    name: '',
+    description: ''
+  })
 
   const enableAddCourseMode = () => {
-    setCourseAddMode(true);
-  };
+    setCourseAddMode(true)
+  }
 
   const disableAddCourseMode = () => {
-    setCourseAddMode(false);
-  };
+    setCourseAddMode(false)
+  }
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
-  };
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    let createdCourse = await AddCourse(formValues);
-    disableAddCourseMode();
+    e.preventDefault()
+    let createdCourse = await AddCourse(formValues)
+    disableAddCourseMode()
     setFormValues({
-      name: "",
-      description: ""
-    });
-    setNeedRefresh(true);
-  };
+      name: '',
+      description: ''
+    })
+    setNeedRefresh(true)
+  }
 
   useEffect(() => {
     let getCoursesList = async () => {
-      let data = await GetCourseList();
-      dispatch(updateAllCoursesList(data));
-      setNeedRefresh(false);
-    };
+      let data = await GetCourseList()
+      dispatch(updateAllCoursesList(data))
+      setNeedRefresh(false)
+    }
 
     if (needRefresh) {
-      getCoursesList();
+      getCoursesList()
     }
-  }, [needRefresh]);
+  }, [needRefresh])
 
-  let addButtonRender = <button disabled>Add Course</button>;
+  let addButtonRender = (
+    <button disabled className="add-course-btn">
+      Add Course
+    </button>
+  )
 
   if (formValues.name && formValues.description) {
-    addButtonRender = <button type="submit">Add Course</button>;
+    addButtonRender = (
+      <button type="submit" className="add-course-btn">
+        Add Course
+      </button>
+    )
   }
 
   let courseAddRender = (
-    <button onClick={enableAddCourseMode}>Add Course</button>
-  );
+    <button onClick={enableAddCourseMode} className="add-course-btn">
+      Add Course
+    </button>
+  )
   if (courseAddMode) {
     courseAddRender = (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="course-form">
         <label>Course name</label>
         <input
           onChange={handleChange}
@@ -79,7 +90,7 @@ const Courses = () => {
         />
         {addButtonRender}
       </form>
-    );
+    )
   }
 
   let courseListRender = (
@@ -88,16 +99,20 @@ const Courses = () => {
         <CourseCard key={course.id} course={course} />
       ))}
     </div>
-  );
+  )
 
   let toRender = (
     <div>
-      <div>this is courses page</div>
+      <div>
+        <h1>Courses</h1>
+      </div>
       <div>{courseAddRender}</div>
-      <div>{courseListRender}</div>
+      <div className="course-card-main">
+        <div>{courseListRender}</div>
+      </div>
     </div>
-  );
-  return toRender;
-};
+  )
+  return toRender
+}
 
-export default Courses;
+export default Courses

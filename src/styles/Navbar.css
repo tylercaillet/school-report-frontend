@@ -2,8 +2,19 @@
     display: flex;
     justify-content: space-around;
     /* background-color: black; */
-    padding: 10px;
+    /* padding: 10px; */
     padding-bottom: 40px;
- 
+ height: 90px;
     color: rgb(0, 0, 0);
+}
+
+.navbar img{
+   height: 100%;
+/* background-color: aliceblue; */
+margin-top: 2px;
+transform: translateX(-180px);
+}
+
+.navbar .initial{
+    margin-top: 20px;
 }
