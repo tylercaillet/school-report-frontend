@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Students from "./pages/Students";
 import Courses from "./pages/Courses";
+import StudentDetails from "./pages/StudentDetails";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/students" element={<Students />} />
+          <Route path="/students/:studentId" element={<StudentDetails />} />
           <Route path="/courses" element={<Courses />} />
         </Routes>
       </main>
