@@ -24,3 +24,14 @@
   scale: 0.55;
     /* padding: 20px 0; */
 }
+
+.logoImg{
+scale: 1.2;
+transform: translateY(-20px);
+  /* background-color: aliceblue; */
+
+}
+
+.hom-text-under-logo{
+  transform: translateY(-30px);
+}
